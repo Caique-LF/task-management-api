@@ -14,4 +14,8 @@ export class UsersService {
         console.log(this.users);
         
     }
+
+    findByUserName(userName: string): UserDto | null{
+        return this.users.find(user => user.userName === userName);
+    }
 }
